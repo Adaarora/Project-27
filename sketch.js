@@ -19,20 +19,23 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	bobObject1 = new Bob(200, 600, 50, 50);
-	bobObject2 = new Bob(300, 600, 50, 50);
-	bobObject3 = new Bob(400, 600, 50, 50);
-	bobObject4 = new Bob(500, 600, 50, 50);
-	bobObject5 = new Bob(600, 600, 50, 50);
+
+	bobDiameter = 50;
+
+	bobObject1 = new Bob(200, 600, bobDiameter);
+	bobObject2 = new Bob(300, 600, bobDiameter);
+	bobObject3 = new Bob(400, 600, bobDiameter);
+	bobObject4 = new Bob(500, 600, bobDiameter);
+	bobObject5 = new Bob(600, 600, bobDiameter);
 
 	roof = new Roof(200, 100, 1200, 20);
 
-	rope1 = new Rope(bobObject1.body, roof.body, -bobDiameter , 10);
-	rope2 = new Rope(bobObject2.body, roof.body, -bobDiameter , 10);
-	rope3 = new Rope(bobObject3.body, roof.body, -bobDiameter , 10);
-	rope4 = new Rope(bobObject4.body, roof.body, -bobDiameter , 10);
-	rope5 = new Rope(bobObject5.body, roof.body, -bobDiameter , 10);
-	
+	rope1 = new Rope(bobObject1.body, roof.body, -bobDiameter, 10);
+	rope2 = new Rope(bobObject2.body, roof.body, -bobDiameter, 10);
+	rope3 = new Rope(bobObject3.body, roof.body, -bobDiameter, 10);
+	rope4 = new Rope(bobObject4.body, roof.body, -bobDiameter, 10);
+	rope5 = new Rope(bobObject5.body, roof.body, -bobDiameter, 10);
+
 
 
 	Engine.run(engine);
