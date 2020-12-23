@@ -29,12 +29,16 @@ function setup() {
 	bobObject5 = new Bob(600, 600, bobDiameter);
 
 	roof = new Roof(200, 100, 1200, 20);
+	roof1 = new Roof(300, 100, 1200, 20);
+	roof2 = new Roof(400, 100, 1200, 20);
+	roof3 = new Roof(500, 100, 1200, 20);
+	roof4 = new Roof(600, 100, 1200, 20);
 
 	rope1 = new Rope(bobObject1.body, roof.body, -bobDiameter, 10);
-	rope2 = new Rope(bobObject2.body, roof.body, -bobDiameter, 10);
-	rope3 = new Rope(bobObject3.body, roof.body, -bobDiameter, 10);
-	rope4 = new Rope(bobObject4.body, roof.body, -bobDiameter, 10);
-	rope5 = new Rope(bobObject5.body, roof.body, -bobDiameter, 10);
+	rope2 = new Rope(bobObject2.body, roof1.body, -bobDiameter, 10);
+	rope3 = new Rope(bobObject3.body, roof2.body, -bobDiameter, 10);
+	rope4 = new Rope(bobObject4.body, roof3.body, -bobDiameter, 10);
+	rope5 = new Rope(bobObject5.body, roof4.body, -bobDiameter, 10);
 
 
 
@@ -65,7 +69,12 @@ function draw() {
 
 }
 
+function keyPressed() {
+	if (keyCode === UP_ARROW) {
+		Matter.Body.applyForce(bobObject5.body, bobObject5.body.position, { x: 80, y: -80 });
 
+	}
+}
 
 
 

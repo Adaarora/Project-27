@@ -15,7 +15,7 @@ class Rope {
         var pointA = this.rope.bodyA.position;
         var pointB = this.rope.bodyB.position;
         strokeWeight(4);
-        
+
         line(pointA.x, pointA.y, pointB.x, pointB.y);
 
     }
