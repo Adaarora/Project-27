@@ -20,25 +20,22 @@ function setup() {
 
 	//Create the Bodies Here.
 
-	bobDiameter = 50;
+	bobDiameter = 40;
 
-	bobObject1 = new Bob(200, 600, bobDiameter);
-	bobObject2 = new Bob(300, 600, bobDiameter);
-	bobObject3 = new Bob(400, 600, bobDiameter);
-	bobObject4 = new Bob(500, 600, bobDiameter);
-	bobObject5 = new Bob(600, 600, bobDiameter);
+	bobObject1 = new Bob(400 - bobDiameter * 2, height / 4 + 500, bobDiameter);
+	bobObject2 = new Bob(400 - bobDiameter, height / 4 + 500, bobDiameter);
+	bobObject3 = new Bob(400, height / 4 + 500, bobDiameter);
+	bobObject4 = new Bob(400 + bobDiameter, height / 4 + 500, bobDiameter);
+	bobObject5 = new Bob(400 + bobDiameter * 2, height / 4 + 500, bobDiameter);
 
-	roof = new Roof(200, 100, 1200, 20);
-	roof1 = new Roof(300, 100, 1200, 20);
-	roof2 = new Roof(400, 100, 1200, 20);
-	roof3 = new Roof(500, 100, 1200, 20);
-	roof4 = new Roof(600, 100, 1200, 20);
+	roof = new Roof(width / 2, height / 4, 1200, 20);
 
-	rope1 = new Rope(bobObject1.body, roof.body, -bobDiameter, 10);
-	rope2 = new Rope(bobObject2.body, roof1.body, -bobDiameter, 10);
-	rope3 = new Rope(bobObject3.body, roof2.body, -bobDiameter, 10);
-	rope4 = new Rope(bobObject4.body, roof3.body, -bobDiameter, 10);
-	rope5 = new Rope(bobObject5.body, roof4.body, -bobDiameter, 10);
+
+	rope1 = new Rope(bobObject1.body, roof.body, -bobDiameter * 2, 0);
+	rope2 = new Rope(bobObject2.body, roof.body, -bobDiameter * 1, 0);
+	rope3 = new Rope(bobObject3.body, roof.body, 0, 0);
+	rope4 = new Rope(bobObject4.body, roof.body, bobDiameter * 1, 0);
+	rope5 = new Rope(bobObject5.body, roof.body, bobDiameter * 2, 0);
 
 
 
